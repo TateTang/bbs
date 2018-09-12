@@ -106,12 +106,12 @@ body,html {
 								style="font-style: italic;">TOP 10 </font>
 						</div>
 						<div align="center" style="float: left;width: 80px;color: #6699CC">
-							<a href="topic_GetHotTopic.action">More&gt;&gt;</a>
+							<a href="topic_GetHotTopic.do">More&gt;&gt;</a>
 						</div>
 					</div>
 					<div class="hotContent">
 						<iframe width="740px" height="335px" frameborder="0"
-							scrolling="no" src="topic_getIndexHotTopic.action"></iframe>
+							scrolling="no" src="topic_getIndexHotTopic.do"></iframe>
 					</div>
 				</div>
 				<div class="fresh">
@@ -121,12 +121,12 @@ body,html {
 								style="font-style: italic;">TOP 10 </font>
 						</div>
 						<div align="center" style="float: left;width: 80px;">
-							<a href="topic_getAllTopic.action">More&gt;&gt;</a>
+							<a href="topic_GetAllTopic.do">More&gt;&gt;</a>
 						</div>
 					</div>
 					<div class="freshContent">
 						<iframe width="740px" height="335px" frameborder="0"
-							scrolling="no" src="topic_getIndexFreshTopic.action"></iframe>
+							scrolling="no" src="topic_getIndexFreshTopic.do"></iframe>
 					</div>
 				</div>
 				<div class="classics">
@@ -136,12 +136,12 @@ body,html {
 								style="font-style: italic;">TOP 10 </font>
 						</div>
 						<div align="center" style="float: left;width: 80px;color: #6699CC">
-							<a href="topic_GetNiceTopic.action">More&gt;&gt;</a>
+							<a href="topic_GetNiceTopic.do">More&gt;&gt;</a>
 						</div>
 					</div>
 					<div class="classicsContent">
 						<iframe width="740px" height="335px" frameborder=0 scrolling="no"
-							src="topic_getIndexNiceTopic.action"></iframe>
+							src="topic_getIndexNiceTopic.do"></iframe>
 					</div>
 				</div>
 			</div>
@@ -151,7 +151,7 @@ body,html {
 					</div>
 					<div class="announcesContent">
 						<iframe width="200px" height="220px" frameborder=0 scrolling="no"
-							src="anno_getIndexAnno.action"></iframe>
+							src="anno_getIndexAnno.do"></iframe>
 					</div>
 				</div>
 				<div class="newButton">
@@ -170,7 +170,7 @@ body,html {
 					</div>
 					<div class="announcesContent">
 						<iframe width="200px" style="min-height: 220px;" frameborder=0
-							scrolling="no" src="help_getIndexHelp.action"></iframe>
+							scrolling="no" src="help_getIndexHelp.do"></iframe>
 					</div>
 				</div>
 				<div class="friendLink">

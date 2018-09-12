@@ -1,0 +1,31 @@
+
+spring:
+    datasource:
+        name: source
+        url: jdbc:mysql://127.0.0.1:3306/forum?useUnicode=true&amp;characterEncoding=utf-8
+        username: root
+        password: 123456
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+    mvc:  
+        view:  
+            prefix: /  
+            suffix: .jsp
+
+mybatis: 
+  mapperLocations: classpath*:com/tmf/bbs/mappers/*.xml
+  typeAliasesPackage: com.tmf.bbs

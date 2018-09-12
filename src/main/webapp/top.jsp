@@ -131,7 +131,7 @@ a img {
 </style>
 <script type="text/javascript">
 	function checkLogin() {
-		var msg = '<s:property value="#session.tu.username"/>';
+		var msg = '${user.username}';
 		if (!msg) {
 			var returnVal = window.confirm("未登录或登录已失效！请登录！", "提示");
 			if (returnVal) {
@@ -201,30 +201,28 @@ a img {
 				onClick="toDesktop('http://giun.vxg197.10000net.cn','Java学习交流论坛')" 
 				name="btn" id="btn" class="font-color">将本站放到桌面</a>
 		</div>
-		<c:if test="#session.tu==null">
+		<c:if test="${user eq null}">
 			<div
 				style="width: 300px;height: 30px;line-height: 30px;float: left;text-align: right;font-weight: bold;font-size: 16px;font-family: 微软雅黑 /* background-color: red; */"
 				id="loginRegisterText">
 				<a href="login.jsp">登录</a>&nbsp;&nbsp;<a href="register.jsp">注册</a>
 			</div>
 		</c:if>
-		<c:if test="#session.tu!=null">
+		<c:if test="${user ne null}">
 			<div
 				style="width: 300px;height: 30px;line-height: 30px;float: left;text-align: right;font-weight: bold;font-size: 16px;font-family: 微软雅黑/* background-color: red; */">
-				<font color="#6699CC">
-				<c:set value="#session.tu.nickname" /> </font>
-				<c:if test="#session.tu.clock==0"></c:if>
-				<c:if test="#session.tu.clock!=0">
-					<sup style="color: red;font-size: 14px;">
-					<c:set value="#session.tu.clock" /> </sup>
+				<font color="#6699CC">${user.nickname } </font>
+			
+				<c:if test="${user.clock!=0 }">
+					<sup style="color: red;font-size: 14px;">${user.clock }</sup>
 				</c:if>
-				[ <a href="user_Logout.action" onclick="return logout()"
+				[ <a href="user_Logout.do" onclick="return logout()"
 					style="color:red">安全退出</a> ]
 			</div>
 		</c:if>
 		<div
 			style="width: 120px;height: 30px;line-height: 30px;float: left;font-weight: bold;text-align: center;font-size: 16px;font-family: 微软雅黑">
-			<a href="user_GoHome.action" onclick="return checkLogin()">个人中心</a>
+			<a href="user_GoHome.do" onclick="return checkLogin()">个人中心</a>
 		</div>
 	</div>
 	<div>
