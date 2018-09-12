@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+ xmlns:context="http://www.springframework.org/schema/context"  
+ xmlns:p="http://www.springframework.org/schema/p"  
+ xmlns:mvc="http://www.springframework.org/schema/mvc"  
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+ xsi:schemaLocation="http://www.springframework.org/schema/beans  
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+      http://www.springframework.org/schema/context  
+      http://www.springframework.org/schema/context/spring-context.xsd  
+      http://www.springframework.org/schema/mvc  
+      http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"> 
+	<!-- 开启注解  扫描base-package下面的所有的类-->
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com.hnrp.bbs.controls"></context:component-scan>
+	<context:component-scan base-package="com.hnrp.bbs.dao"></context:component-scan>
+	<context:component-scan base-package="com.hnrp.bbs.servicesImpl"></context:component-scan>
+	
+	<!-- 视图渲染器 配置 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="jspViewResolver">
+		<property value="org.springframework.web.servlet.view.JstlView" name="viewClass"/>
+		<!-- 前缀 指定资源存放的位置 -->
+		<property value="/" name="prefix"/>
+		<!-- 后缀 指定资源的类型 -->
+		<property value=".jsp" name="suffix"/>
+	</bean>
+	<!-- 将我自己的类交给SPRING进行管理 -->
+  <!--  <mvc:annotation-driven conversion-service="conversionService"/>
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+		</property>
+	</bean>
+	 -->
+</beans>
