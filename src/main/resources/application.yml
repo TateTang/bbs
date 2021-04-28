@@ -1,3 +1,4 @@
+
 spring:
     datasource:
         name: source
@@ -32,3 +33,5 @@ logging:
 mybatis: 
   mapperLocations: classpath*:mappers/*.xml
   typeAliasesPackage: com.tmf.bbs
+server:
+    port: 8888
