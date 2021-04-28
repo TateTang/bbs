@@ -11,5 +11,5 @@ public interface CommentServices {
 	 * @param commentId
 	 * @param topicId
 	 */
-	public void deleteComment(Integer commentId,Integer topicId);
+	void deleteComment(Integer commentId, Integer topicId);
 }

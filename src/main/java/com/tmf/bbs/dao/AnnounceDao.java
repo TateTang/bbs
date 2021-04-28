@@ -1,22 +1,21 @@
 package com.tmf.bbs.dao;
 
-import java.util.List;
-
+import com.tmf.bbs.entity.Announce;
 import org.apache.ibatis.annotations.Select;
 
-import com.tmf.bbs.entity.Announce;
+import java.util.List;
 
 public interface AnnounceDao {
-	
-	@Select("select * from t_announce limit 0,5")
-	public List<Announce> getIndexAnno();
-	
-	@Select("select * from t_announce")
-	public List<Announce> getAllAnno();
-	
-	@Select("select * from t_announce where id=#{id}")
-	public Announce getAnnoById(Integer id);
-	
-	@Select("select count(1) annosize from t_announce")
-	public int countAnno();
+
+    @Select("select * from t_announce limit 0,5")
+    List<Announce> getIndexAnno();
+
+    @Select("select * from t_announce")
+    List<Announce> getAllAnno();
+
+    @Select("select * from t_announce where id=#{id}")
+    Announce getAnnoById(Integer id);
+
+    @Select("select count(1) annosize from t_announce")
+    int countAnno();
 }
