@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmf.bbs.mappers.userMap">
+	<!--
+		userBean 一对多  userGrade
+		userBean 一对一  topicSet newSet commentSet
+	  -->
+	<resultMap type="com.tmf.bbs.entity.User" id="userBean">
+		<id column="id" property="id" javaType="java.lang.Integer"/>
+		<result column="username" property="username" javaType="java.lang.String"/>
+		<result column="password" property="password" javaType="java.lang.String"/>
+		<result column="nickname" property="nickname" javaType="java.lang.String"/>
+		<result column="sex" property="sex" javaType="java.lang.String"/>
+		<result column="picture" property="picture" javaType="java.lang.String"/>
+		<result column="email" property="email" javaType="java.lang.String"/>
+		<result column="come_from" property="come_from" javaType="java.lang.String"/>
+		<result column="introduction" property="introduction" javaType="java.lang.String"/>
+		<result column="profession" property="profession" javaType="java.lang.String"/>
+		<result column="grade_integal" property="grade_integal" javaType="java.lang.Integer"/>
+		<result column="integral" property="integral" javaType="java.lang.Integer"/>
+		<result column="clock" property="clock" javaType="java.lang.Integer"/>
+		<result column="topic_count" property="topic_count" javaType="java.lang.Integer"/>
+		<result column="comment_count" property="comment_count" javaType="java.lang.Integer"/>
+		<result column="role_id" property="role_id" javaType="java.lang.Integer"/>
+		<result column="register_time" property="register_time" javaType="java.util.Date"/>
+		<result column="status" property="status" javaType="java.lang.String"/>
+		<association property="userGrade" select="selectGradeByUser" column="users_grade_id" javaType="com.tmf.bbs.entity.Grade"/>
+	</resultMap>
+	<!-- userGrade -->
+	<select id="selectGradeByUser" resultType="com.tmf.bbs.entity.Grade">
+		select * from t_grade where id=#{id}
+	</select>
+	
+	<!-- topicSet -->
+	
+	<!-- newSet -->
+	
+	<!-- commentSet -->
+</mapper>

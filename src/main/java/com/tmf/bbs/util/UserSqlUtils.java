@@ -2,7 +2,7 @@ package com.tmf.bbs.util;
 
 import org.apache.ibatis.jdbc.SQL;
 
-import com.tmf.bbs.pojo.User;
+import com.tmf.bbs.entity.User;
 
 public class UserSqlUtils {
 	/**

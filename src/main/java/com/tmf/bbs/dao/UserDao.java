@@ -7,10 +7,10 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tmf.bbs.pojo.Comment;
-import com.tmf.bbs.pojo.New;
-import com.tmf.bbs.pojo.Topic;
-import com.tmf.bbs.pojo.User;
+import com.tmf.bbs.entity.Comment;
+import com.tmf.bbs.entity.New;
+import com.tmf.bbs.entity.Topic;
+import com.tmf.bbs.entity.User;
 import com.tmf.bbs.util.UserSqlUtils;
 
 /**

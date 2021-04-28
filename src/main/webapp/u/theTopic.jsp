@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,com.tmf.bbs.pojo.User" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,com.tmf.bbs.entity.User" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <%

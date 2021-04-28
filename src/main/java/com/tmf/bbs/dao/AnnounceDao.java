@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Select;
 
-import com.tmf.bbs.pojo.Announce;
+import com.tmf.bbs.entity.Announce;
 
 public interface AnnounceDao {
 	

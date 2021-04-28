@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Select;
 
-import com.tmf.bbs.pojo.Help;
+import com.tmf.bbs.entity.Help;
 
 public interface HelpDao {
 	

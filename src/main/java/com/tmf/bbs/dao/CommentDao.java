@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.session.RowBounds;
 
-import com.tmf.bbs.pojo.Comment;
+import com.tmf.bbs.entity.Comment;
 
 /**
  * 

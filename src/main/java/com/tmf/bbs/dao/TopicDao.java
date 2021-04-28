@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.session.RowBounds;
 
-import com.tmf.bbs.pojo.Topic;
+import com.tmf.bbs.entity.Topic;
 
 public interface TopicDao {
 		/**
